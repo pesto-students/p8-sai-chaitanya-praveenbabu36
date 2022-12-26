@@ -1,0 +1,14 @@
+.body {
+
+    background-color: lightseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+
+    background-color: lightblue;
+}
+
+.article {
+    border : 1px solid black;
+}
