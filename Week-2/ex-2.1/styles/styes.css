@@ -1,14 +1,58 @@
-.body {
-
-    background-color: lightseagreen;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
 }
 
 .container {
+    display : grid;
+    grid-template-columns: auto auto;
+}
 
-    background-color: lightblue;
+@media only screen and (max-width: 800px) {
+
+    .container {
+        grid-template-columns: auto
+    }
 }
 
 .article {
-    border : 1px solid black;
+    padding: 10px;
+    align-items: center;
+    border : 0px solid red;
+}
+
+.article_image {
+    display : grid;
+    grid-template-columns: auto;
+    padding : 5px;
+    grid-row-start: 1;
+    grid-row-end:4;
+    border: 0px solid green;
+}
+
+.image{
+    display : block;
+    margin: auto;
+    text-align: center;
+    border: 0px solid blue;
+}
+
+.image img {
+    width : 100%;
+}
+
+.form1 label{
+    padding: 15px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form1 label {
+    display: block;
+    padding : 5px;
+}
+
+footer {
+    padding-top: 20px;
 }
