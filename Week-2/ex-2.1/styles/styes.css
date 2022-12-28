@@ -19,7 +19,6 @@ body {
 .article {
     padding: 10px;
     align-items: center;
-    border : 0px solid red;
 }
 
 .article_image {
@@ -28,14 +27,12 @@ body {
     padding : 5px;
     grid-row-start: 1;
     grid-row-end:4;
-    border: 0px solid green;
 }
 
 .image{
     display : block;
     margin: auto;
     text-align: center;
-    border: 0px solid blue;
 }
 
 .image img {
