@@ -1,0 +1,52 @@
+.container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.tl {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: 2s;
+}
+
+.tr {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: 2s;
+}
+
+.bl {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: 2s;
+}
+
+.br {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: 2s;
+}
+
+.container:hover .tl {
+  transform: translateX(-50px) rotate(90deg);
+}
+
+.container:hover .tr {
+  transform: translateX(50px) rotate(-90deg);
+}
+
+.container:hover .bl {
+  transform: translateX(-50px) rotate(-90deg);
+}
+
+.container:hover .br {
+  transform: translateX(50px) rotate(90deg);
+}
