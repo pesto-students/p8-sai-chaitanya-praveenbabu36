@@ -1,6 +1,6 @@
 //reducer
 function add(a, b) {
-    return a+b;
+    return a + b;
 }
 
 // time the func call
@@ -16,6 +16,10 @@ function memoize(fn){
     const cache = new Map();
 
     return function(...args) {
+
+        // push 0 to arg if only one arg is passed
+        if(args.length < 2)
+            args.push(0);
 
         const key = args.join('-');
 
@@ -40,3 +44,7 @@ time( () => memoizeAdd(100,100) );
 // add-2
 time( () => memoizeAdd(200,100) );
 time( () => memoizeAdd(200,100) );
+
+// add-3
+time( () => memoizeAdd(520) );
+time( () => memoizeAdd(520) );
