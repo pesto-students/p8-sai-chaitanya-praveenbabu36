@@ -10,10 +10,33 @@ function time(fn){
     console.timeEnd();
 }
 
+//memoize add using map
+function memoize(fn){
+
+    const cache = new Map();
+
+    return function(...args) {
+
+        const key = args.join('-');
+
+        if(cache.has(key)){
+            console.log('Return value from memory.');
+            return cache.get(key);
+        }
+
+        console.log('Set key and value to map & return.');
+        cache.set(key, fn(...args));
+        return cache.get(key);
+    }
+
+}
+
+const memoizeAdd = memoize(add);
+
 // add-1
-time( () => add(100,100) );
-time( () => add(100,100) );
+time( () => memoizeAdd(100,100) );
+time( () => memoizeAdd(100,100) );
 
 // add-2
-time( () => add(200,100) );
-time( () => add(200,100) );
+time( () => memoizeAdd(200,100) );
+time( () => memoizeAdd(200,100) );
