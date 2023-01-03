@@ -4,8 +4,17 @@
 // a circle obj
 var circleObj = {
     radius : 2,
-    getArea : function() {
-        return Math.PI * this.radius * this.radius
+    getArea : function(args) {
+        var reply = [
+            'Area: ',
+            Math.PI * this.radius * this.radius
+        ];
+
+        if(args) 
+            reply.push(`Args: ${args}`)
+        
+        
+        return reply.join(' ');
     }
 }
 
@@ -35,3 +44,5 @@ var circleObj2 = {
 console.log(getCircleArea.call(circleObj)); 
 console.log(getCircleArea.call(circleObj2)); 
 
+// pass additional param using call
+console.log(circleObj.getArea.call(circleObj2, 'Blue', 'White'));
