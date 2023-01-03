@@ -22,3 +22,16 @@ console.log(getCircleArea());
 // use bind to attach circleObj to the this
 console.log(getCircleArea.bind(circleObj)()); 
 
+// call
+/*  use call to attach a obj to this.
+    Difference between bind and call is that
+        - bind creates a copy of func
+        - additional args can be passed to the func in call
+*/
+var circleObj2 = {
+    radius : 5
+}
+
+console.log(getCircleArea.call(circleObj)); 
+console.log(getCircleArea.call(circleObj2)); 
+
