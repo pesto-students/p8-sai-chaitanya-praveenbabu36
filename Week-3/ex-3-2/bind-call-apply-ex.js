@@ -4,7 +4,7 @@
 // a circle obj
 var circleObj = {
     radius : 2,
-    getArea : function(args) {
+    getArea : function(...args) {
         var reply = [
             'Area: ',
             Math.PI * this.radius * this.radius
@@ -45,4 +45,10 @@ console.log(getCircleArea.call(circleObj));
 console.log(getCircleArea.call(circleObj2)); 
 
 // pass additional param using call
-console.log(circleObj.getArea.call(circleObj2, 'Blue', 'White'));
+console.log(getCircleArea.call(circleObj2, 'Blue', 'White'));
+
+// apply
+/*  
+    call and apply are similar except args are passed as arrays in apply
+*/
+console.log(getCircleArea.apply(circleObj2, ['Black', 'Green', 'Orange']));
