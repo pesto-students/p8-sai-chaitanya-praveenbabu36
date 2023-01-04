@@ -30,8 +30,10 @@ Question : What is the output and Why ?
 Output : Count is 0
 
 Reason : 
-            Because of the JS closures, the log function hold on to the initial message str 'Count is 0' 
+            Because of the JS closures, the log() hold on to the initial 'message' string 'Count is 0' 
                 during the createIncrement function call.  
-            Even though the count is incremented, the message is not changed. 
+
+            Even though the count is incremented, the 'message' variable is not changed. 
+                Changing the 'message' string inside the increment() will print result 'Count is 3'.
 
 */
