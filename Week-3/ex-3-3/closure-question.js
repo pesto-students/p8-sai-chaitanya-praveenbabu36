@@ -27,6 +27,11 @@ log(); // What is logged ?
 
 Question : What is the output and Why ? 
 
+Output : Count is 0
 
+Reason : 
+            Because of the JS closures, the log function hold on to the initial message str 'Count is 0' 
+                during the createIncrement function call.  
+            Even though the count is incremented, the message is not changed. 
 
 */
